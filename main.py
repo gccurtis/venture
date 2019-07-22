@@ -13,5 +13,9 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
-    ('/',MainHandler)
+    ('/',MainHandler),
+    ('/',enterHandler),
+    ('/selfie',selfieHandler),
+    ('/call',callnHandler),
+    ('/summon',summonHandler),
 ], debug=True)
